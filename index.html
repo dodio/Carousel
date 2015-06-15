@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>夕阳 - 轮播图框架</title>
+  <meta name="renderer" content="webkit">
+  <meta name="MSSmartTagsPreventParsing" content="True" />
+  <meta http-equiv="MSThemeCompatible" content="Yes" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+  
+  <style>
+/*轮播图的框架css*/
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.carousel .wrap {
+  width: 10000px;
+}
+.carousel .carousel-item {
+  float: left;
+  display: none;
+}
+.carousel .carousel-control {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
+.carousel .carousel-btns {
+  position: relative;
+  left: 50%;
+  margin-top: 13px;
+  float: left;
+}
+.carousel .carousel-btns .carousel-btn {
+  position: relative;
+  left: -50%;
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border: 1px solid #e1e1e1;
+  float: left;
+  margin-left: 8px;
+  cursor: pointer;
+}
+.carousel .carousel-btns .carousel-btn.cur {
+  border: none;
+  background-color: #000;
+}
+
+  </style>
+</head>
+<body>
+
+ 
+<style>
+  .big_banner{
+    height: 360px;
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .big_banner .banner_item{
+    width: 100%;
+    height: 360px;
+  }
+  .big_banner .banner_item a{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+  }
+</style>
+  <div class="big_banner">
+    <div id="banner" class="carousel">
+        <div class="wrap group">
+            <div class="carousel-item" style="display: block;">
+              <div class="banner_item" style="background: url(http://img.alicdn.com/imgextra/i3/470168984/TB2IKuZdXXXXXXXXpXXXXXXXXXX_!!470168984.jpg_Q90.jpg) 50% 50% no-repeat;">
+                <a href="" target="_blank" class="bannerlink"></a>
+              </div>
+            </div>
+
+           
+            <div class="carousel-item">
+              <div class="banner_item" style="background: url(http://img.alicdn.com/imgextra/i3/2102356460/TB26fqGdXXXXXcfXpXXXXXXXXXX_!!2102356460.jpg_Q75.jpg) 50% 50% no-repeat;">
+                <a href="" target="_blank" class="bannerlink"></a>
+              </div>
+            </div>
+           
+            <div class="carousel-item">
+              <div class="banner_item" style="background: url(http://img.alicdn.com/imgextra/i3/877104952/TB2HTxZbVXXXXbeXpXXXXXXXXXX_!!877104952.jpg_Q75.jpg) 50% 50% no-repeat;">
+                <a href="" target="_blank" class="bannerlink"></a>
+              </div>
+            </div>
+        </div>
+        <div class="carousel-control">
+          <div class="carousel-btns">
+            <div class="carousel-btn cur"></div>
+            <div class="carousel-btn"></div>
+            <div class="carousel-btn"></div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+
+<style>
+  .small_banner{
+    height: 180px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    overflow: hidden;
+  }
+
+  .small_banner .banner_item{
+    width: 100%;
+    height: 180px;
+  }
+  .small_banner .banner_item img{
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+  <div class="small_banner">
+    <div id="small_banner" class="carousel">
+        <div class="wrap group">
+            <div class="carousel-item" style="display: block;">
+              <div class="banner_item">
+                <a href="" target="_blank">
+                  <img src="http://img.alicdn.com/imgextra/i3/470168984/TB2IKuZdXXXXXXXXpXXXXXXXXXX_!!470168984.jpg_Q90.jpg" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="banner_item">
+                <a href="" target="_blank">
+                  <img src="http://img.alicdn.com/imgextra/i3/2102356460/TB26fqGdXXXXXcfXpXXXXXXXXXX_!!2102356460.jpg_Q75.jpg" alt="">
+                </a>
+              </div>
+            </div>
+           
+            <div class="carousel-item">
+              <div class="banner_item">
+                <a href="" target="_blank">
+                  <img src="http://img.alicdn.com/imgextra/i3/877104952/TB2HTxZbVXXXXbeXpXXXXXXXXXX_!!877104952.jpg_Q75.jpg" alt="">
+                </a>
+              </div>
+            </div>
+        </div>
+        <div class="carousel-control">
+          <div class="carousel-btns">
+            <div class="carousel-btn cur"></div>
+            <div class="carousel-btn"></div>
+            <div class="carousel-btn"></div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="lib/carousel.js"></script>
+  <script>
+    var xyz = $("#banner").carousel({
+      width:undefined, //指定容器的宽度，不指定从#banner获取
+      duration:3000, //切换时间间隔
+      effect:{
+        name:"fade", //切换方法
+        speed:300  //切换动画速度
+      }
+    });
+    var abc = $("#small_banner").carousel();
+  </script>
+</body>
+</html>
